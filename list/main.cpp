@@ -11,5 +11,14 @@ int main(void) {
     elem* fourth = find_elem(head, 4); 
     insert_after(fourth, 5);
     print_all(head);
+    cout<<"Удаляем последний: \n";
+    remove_back(head);
+    print_all(head);
+    cout<<"Удаляем 5-ый: \n";
+    remove_elem(head, 5);
+    print_all(head);
+    // cout<<"Удаляем все: \n";
+    // delete_all(head);
+    // print_all(head);
     return 0; 
 }

@@ -9,7 +9,6 @@ struct elem {
     elem* p_next;
     elem* p_previous;  
     elem(int d);
-    ~elem();
 };
 //  ИНИЦИАЛИЗАЦИЯ СПИСКА
 
@@ -25,8 +24,8 @@ void insert_after(elem* prev_elem, int new_data);
 
 void remove_front(elem* head);
 void remove_back(elem* head);
-void remove_elem(elem* r_elem);
-void remove_all(elem* head);
+void remove_elem(elem* head, int index);
+void delete_all(elem* head);
 
 //  ВЫВОД НА ЭКРАН
 
