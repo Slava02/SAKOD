@@ -17,8 +17,11 @@ int main(void) {
     cout<<"Удаляем 5-ый: \n";
     remove_elem(head, 5);
     print_all(head);
-    // cout<<"Удаляем все: \n";
-    // delete_all(head);
-    // print_all(head);
+    cout<<"Удаляем 1-ый: \n";
+    remove_elem(head, 1);
+    print_all(head);
+    cout<<"Удаляем все: \n";
+    delete_all(head);
+    //print_all(head);
     return 0; 
 }

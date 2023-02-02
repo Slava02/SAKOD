@@ -67,31 +67,24 @@ void remove_elem(elem* head, int index) {
     delete r_elem; 
 }
 
-// void delete_all(elem* head) {
-//     elem* tmp = head; 
-//     while(tmp->p_next) { 
-//         tmp = tmp->p_next;
-//         delete PREV(tmp); 
-//     }
-// }
-
-/*
-void remove_front(elem* head) { // TODO обработать случай, если элемент один
-    if(NEXT(head)) {
-        NEXT(head)->p_previous = nullptr;
-        elem* tmp = head; 
-        head = NEXT(head);
-        delete tmp; 
-    }
-}
-*/
-// ВЫВОД НА ЭКРАН
-
-void print_all(elem* head) {
+void delete_all(elem* head) {
     elem* tmp = head; 
     while(tmp->p_next) { 
         tmp = tmp->p_next;
-        cout << tmp->data << "---"; 
+        delete (PREV(tmp)); 
+    }
+    delete tmp; 
+}
+
+// ВЫВОД НА ЭКРАН
+
+void print_all(elem* head) { //  TODO обработать случай когда head null
+    if(head) {
+        elem* tmp = head; 
+        while(tmp->p_next) { 
+            tmp = tmp->p_next;
+            cout << tmp->data << "---"; 
+        }
     }
     cout << '\n';
 }

@@ -6,7 +6,7 @@ all: clean list
 
 list : 
 	$(CC) $(CFLAGS) *.cpp *.h -o $(TARGET)
-	./list
+	valgrind ./list
 
 clean : 
 	rm -f *.o *.log $(TARGET) 
